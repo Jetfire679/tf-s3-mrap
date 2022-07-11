@@ -34,7 +34,8 @@ data "aws_iam_policy_document" "bucket-encryption-kms-policy" {
     principals {
       type = "AWS"
       identifiers = [
-        "arn:aws:iam::${local.account_id}:user/usercdk-675716041761"
+        "arn:aws:iam::${local.account_id}:user/usercdk-675716041761",
+        "arn:aws:iam::675716041761:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AdministratorAccess_3b3702678e849fa7"
       ]
     }
     actions = [
