@@ -34,7 +34,7 @@ data "aws_iam_policy_document" "bucket-encryption-kms-policy" {
     principals {
       type = "AWS"
       identifiers = [
-        "arn:aws:iam::${local.account_id}:user/terraform"
+        "arn:aws:iam::${local.account_id}:user/usercdk-675716041761"
       ]
     }
     actions = [
