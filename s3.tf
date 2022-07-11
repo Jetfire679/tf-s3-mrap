@@ -1,6 +1,8 @@
 resource "aws_s3_bucket" "app-artifact-east-2" {
   bucket = "vignali-${random_pet.s3-bucket.id}-east-2"
 
+  force_destroy = true
+
   provider = aws.east-2
 }
 
@@ -81,6 +83,7 @@ resource "aws_s3_bucket_replication_configuration" "app-artifact-east-2" {
 
 resource "aws_s3_bucket" "app-artifact-west-2" {
   bucket = "vignali-${random_pet.s3-bucket.id}-west-2"
+  force_destroy = true
 
   provider = aws.west-2
 }
